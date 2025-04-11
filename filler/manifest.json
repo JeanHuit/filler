@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "FormFiller",
+  "version": "1.0",
+  "description": "Fills forms with random data for testing purposes",
+  "permissions": ["activeTab", "storage"],
+  "browser_action": {
+    "default_icon": "icons/icon-48.png",
+    "default_title": "FormFiller",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts/formfiller.js"]
+    }
+  ]
+}
